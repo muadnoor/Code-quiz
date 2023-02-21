@@ -7,6 +7,7 @@ const quiz = document.querySelector(".quiz")
 const timer = document.querySelector(".timer")
 const questionDiv = document.querySelector(".questionDiv")
 const choicesDiv = document.querySelector(".choicesDiv")
+quiz.style.display = "none"
 
 // save section
 const save = document.querySelector(".save")
@@ -15,7 +16,10 @@ save.style.display = "none"
 const index = 0;
 const score = 0;
 const startTime = 60;
-startBtn.addEventListener("click", start(index))
+startBtn.addEventListener("click", function () {
+    welcome.style.display = "none"
+    start(index)
+})
 
 const api = [
     {
@@ -44,5 +48,14 @@ const api = [
 ]
 
 function start(index) {
-    
+    quiz.style.display = "block"
+    questionDiv.innerHTML = ""
+    choicesDiv.innerHTML = ""
+    questionDiv.innerHTML = api[index].question
+    const currentSet = api[index].choices;
+    currentSet.forEach(function(i) {
+        const choice = document.createElement("li")
+        choice.innerHTML = i;
+        choicesDiv.append(choice)
+    })
 }

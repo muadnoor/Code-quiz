@@ -5,3 +5,14 @@ html, body {
     background: rgb(21, 113, 167);
     color: rgb(223, 205, 183);
 }
+
+.choicesDiv li {
+cursor: pointer;
+list-style-type: none;
+margin: 8px 0 8px 0;
+background: rgb(35, 84, 148);
+width: 100px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 8px;
+}

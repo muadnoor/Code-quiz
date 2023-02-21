@@ -1,8 +1,21 @@
+// welcome section
 const welcome = document.querySelector(".welcome")
 const startBtn = document.querySelector(".startBtn")
 
+// quiz section
 const quiz = document.querySelector(".quiz")
+const timer = document.querySelector(".timer")
+const questionDiv = document.querySelector(".questionDiv")
+const choicesDiv = document.querySelector(".choicesDiv")
+
+// save section
 const save = document.querySelector(".save")
+save.style.display = "none"
+
+const index = 0;
+const score = 0;
+const startTime = 60;
+startBtn.addEventListener("click", start(index))
 
 const api = [
     {
@@ -28,4 +41,8 @@ const api = [
         choices: ["green", "purple", "pink"],
         correct: "green"
     },
-] 
+]
+
+function start(index) {
+    
+}
